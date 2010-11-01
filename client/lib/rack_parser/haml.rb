@@ -20,7 +20,7 @@ module RackParser
 
     private
     def get_template_name(requested_file)
-      requested_file == '/' ?  '/index.haml' : requested_file.gsub(/html$/, 'haml')
+      requested_file == '/' ?  '/index.haml' : requested_file.gsub(/html|tpl$/, 'haml')
     end
 
     def render(template_name)
