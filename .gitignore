@@ -1,2 +1,3 @@
 *.swp
 client/tmp
+clint/.sass-cache
