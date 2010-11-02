@@ -2,9 +2,13 @@ var login = {
 
   init: function() {
 
-    utils.getTemplate('login', function(template) {
-      utils.modalFor($.tmpl(template, {}), {id: 'login'});
-    })
+    utils.getScript('jquery/jquery.validate.min', function() {
+      utils.getTemplate('login', function(template) {
+        var loginWindow = utils.modalFor($.tmpl(template, {}), {id: 'login'});
+        loginWindow.find('form').validate();
+        loginWindow.jqmShow();
+      });
+    });
 
   }
 

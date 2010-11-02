@@ -1,17 +1,17 @@
-/* jqModal base Styling courtesy of;
-  Brice Burgess <bhb@iceburg.net> */
-/* The Window's CSS z-index value is respected (takes priority). If none is supplied,
-  the Window's z-index value will be set to 3000 by default (in jqModal.js). You
-  can change this value by either;
-    a) supplying one via CSS
-    b) passing the "zIndex" parameter. E.g.  (window).jqm({zIndex: 500}); */
-/* line 11, ../../lib/stylesheets/style.scss */
+/* line 5, ../../lib/stylesheets/style.scss */
+form.bp input.text, form.bp input.title, form.bp input[type="email"], form.bp input[type="text"], form.bp input[type="password"] {
+  margin: 0px !important;
+}
+
+/* line 9, ../../lib/stylesheets/style.scss */
 .jqmWindow {
   display: none;
   position: fixed;
   top: 17%;
   left: 50%;
   margin-left: -300px;
+  min-width: 600px;
+  width: auto !important;
   width: 600px;
   background-color: #EEE;
   color: #333;
@@ -19,7 +19,7 @@
   padding: 12px;
 }
 
-/* line 27, ../../lib/stylesheets/style.scss */
+/* line 25, ../../lib/stylesheets/style.scss */
 .jqmOverlay {
   background-color: #000;
 }
@@ -27,8 +27,48 @@
 /* Fixed posistioning emulation for IE6
      Star selector used to hide definition from browsers other than IE6
      For valid CSS, use a conditional include instead */
-/* line 34, ../../lib/stylesheets/style.scss */
+/* line 32, ../../lib/stylesheets/style.scss */
 * html .jqmWindow {
   position: absolute;
   top: expression((document.documentElement.scrollTop || document.body.scrollTop) + Math.round(17 * (document.documentElement.offsetHeight || document.body.clientHeight) / 100) + 'px');
+}
+
+/* line 41, ../../lib/stylesheets/style.scss */
+form fieldset .row {
+  overflow: hidden;
+  *zoom: 1;
+  width: 100%;
+  margin-bottom: 10px;
+}
+/* line 46, ../../lib/stylesheets/style.scss */
+form fieldset .row label {
+  width: 150px;
+  display: inline;
+  float: left;
+}
+/* line 50, ../../lib/stylesheets/style.scss */
+form fieldset .row input {
+  width: 300px;
+  display: inline;
+  float: left;
+}
+
+/* line 60, ../../lib/stylesheets/style.scss */
+#login {
+  min-height: 185px;
+  height: auto !important;
+  height: 185px;
+}
+
+/* line 64, ../../lib/stylesheets/style.scss */
+.hidden {
+  display: none;
+}
+
+/* line 68, ../../lib/stylesheets/style.scss */
+.error {
+  border: 1px solid #FBC2C4 !important;
+  color: #8A1F11 !important;
+  padding: 5px !important;
+  margin: 0px !important;
 }

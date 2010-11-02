@@ -1,6 +1,12 @@
 module RackParser
 
   require 'haml'
+=begin
+  require 'active_support'
+  require 'action_view'
+  require 'action_view/helpers'
+  include ActionView::Helpers
+=end
 
   class Haml
     
@@ -29,7 +35,6 @@ module RackParser
     end
 
     def get_extensions_regexp
-      debugger
       @options[:extensions].join('|') << '|\/'
     end
 

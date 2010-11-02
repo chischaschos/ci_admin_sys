@@ -1,3 +1,10 @@
 source :gemcutter
+
+gem 'rack'
 gem 'haml'
 gem 'compass'
+gem 'actionpack'
+
+group :development do
+  gem 'rack-debug'
+end

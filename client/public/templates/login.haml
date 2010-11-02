@@ -1,4 +1,12 @@
-%form
+%form.bp
   %fieldset
     %legend Please authenticate yourself before proceed
+    .row
+      %label{:for => 'user[email]'} Email
+      %input.required.email{:type => 'text', :name => 'user[email]', :id => 'user[email]'}
+    .row
+      %label{:for => 'user[password]'} Password
+      %input.required{:type => 'password', :name => 'user[password]', :id => 'user[password]', :minlength => 8}
+    .row.actions
+      %button.button.positive{:type => 'submit'} Log me in
       

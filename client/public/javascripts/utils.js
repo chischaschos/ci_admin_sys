@@ -2,12 +2,12 @@ var utils = {
 
   windowTpl: null,
 
-  getScript: function(scriptName) {
-    $.getScript('/javascripts/' + scriptName + '.js')  
+  getScript: function(scriptName, callback) {
+    $.getScript('/javascripts/' + scriptName + '.js', callback);
   },
 
   getTemplate: function(templateName, callback) {
-    $.get('/templates/' + templateName + '.tpl', callback)  
+    $.get('/templates/' + templateName + '.tpl', callback);
   },
 
   initWindows: function() {
@@ -22,9 +22,9 @@ var utils = {
 
     $('#container').append(newWindow);
     newWindow.attr('id', options['id']);
+    newWindow.addClass('hidden')
     newWindow.jqm({modal: true});
     newWindow.html(content);
-    newWindow.jqmShow();
 
     return newWindow;
   }
