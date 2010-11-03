@@ -6,8 +6,16 @@ var utils = {
     $.getScript('/javascripts/' + scriptName + '.js', callback);
   },
 
+  getScripts: function(scripts) {
+    /* TODO: This function needs to receive an array of scripts that should be loaded sequentially */
+  },
+
   getTemplate: function(templateName, callback) {
     $.get('/templates/' + templateName + '.tpl', callback);
+  },
+
+  getTemplates: function(templates) {
+    /* TODO: This function needs to receive an array of templates that should be loaded sequentially */
   },
 
   initWindows: function() {

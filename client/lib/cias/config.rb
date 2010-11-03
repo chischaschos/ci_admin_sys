@@ -2,7 +2,17 @@ module CIAS
   module Config
     def self.defaults
       {:services => {
-        :login => '/test/login'
+        :login => { 
+          :url => '/test/login',
+          :response => {
+            :session => {
+                :id => 1,
+                :name => 'bla_session'
+              },
+            :successful => true,
+            :errors => nil
+            }
+          }
         }
       }
     end

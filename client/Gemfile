@@ -4,6 +4,7 @@ gem 'rack'
 gem 'haml'
 gem 'compass'
 gem 'actionpack'
+gem 'json'
 
 group :development do
   gem 'rack-debug'

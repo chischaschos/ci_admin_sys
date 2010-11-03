@@ -25,6 +25,7 @@ GEM
       abstract (>= 1.0.0)
     haml (3.0.23)
     i18n (0.4.2)
+    json (1.4.6)
     linecache (0.43)
     rack (1.2.1)
     rack-debug (1.4.2)
@@ -48,5 +49,6 @@ DEPENDENCIES
   actionpack
   compass
   haml
+  json
   rack
   rack-debug

@@ -1,4 +1,4 @@
-%form.bp{:action => "#{services[:login]}", :method => 'post'}
+%form.bp{:action => "#{services[:login][:url]}", :method => 'post'}
   %fieldset
     %legend Please authenticate yourself before proceed
     .row
